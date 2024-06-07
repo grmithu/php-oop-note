@@ -1,21 +1,16 @@
 <?php
  
-// jodi kono class k abstract kare dei tahole oi class k r object kara jabe nah
-abstract class Father{
-    function addTwo(){
-        $num1=10;
-        $num2=10;
-        $num3=$num1+$num2;
-        echo $num3;
+    $numbers = array(37, -5, 10, -7, -18);
+
+    if (!empty($numbers)) {
+        $absoluteValues = array_map('abs', $numbers);
+
+        $minAbsoluteValue = min($absoluteValues);
+        echo "The minimum absolute value is: " . $minAbsoluteValue;
+    } 
+    else {
+        echo "Please enter a valid list of numbers.";
     }
-}    
-
-class Son extends Father{
-
-}
-
-$obj = new Son();
-$obj->addTwo(); 
-
 
 ?>
+

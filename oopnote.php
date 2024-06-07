@@ -2,6 +2,9 @@
 Class, Object 
 ===============================-->
 
+
+
+
 <?php
 
 // class create
@@ -15,7 +18,7 @@ class MyClass{
         echo "Software Engineer";
     }
 
-    public function brac($year){
+    public function brac($year){ // parameter
         return $year;
     }
 
@@ -26,7 +29,7 @@ $obj = new MyClass;
 
 echo $obj->name;
 echo $obj->info();
-echo $obj->brac(2024);
+echo $obj->brac(2024);  // arguments
 
 ?>
 
@@ -34,6 +37,8 @@ echo $obj->brac(2024);
 
 <!--============================== 
 Constructor
+--------------------------
+// Automatic
 ===============================-->
 
 <?php
@@ -92,6 +97,9 @@ echo MyClass::$cityList[1];
 
 <!--============================== 
 Inheritance
+----------------------------------
+Object -> is a -> object
+----------------------------------
 ===============================-->
 
 
@@ -181,6 +189,107 @@ $obj->addTwo();
 
 
 <!--============================== 
+Interface
+===============================-->
+
+<?php
+
+// blueprint
+
+interface ProductInterface{
+    public function ProductList();
+    // public function ProductCategory();
+    // public function ProductBrand();
+    // public function ProductCart();
+}
+
+// implement
+
+class Product implements ProductInterface{
+    public function ProductList(){
+        echo "Product List Here";
+    }
+
+
+}
+
+$ProductObj = new Product();
+$ProductObj->ProductList();
+
+?>
+
+
+<!--============================== 
+Overloading
+===============================-->
+// for OOP -> not PHP
+// method name same
+// parameter different
+
+
+<?php
+
+class Product{
+    public function __call($name, $param){
+        print_r($param);
+    }
+
+    public static function __callStatic($name, $param){
+        print_r($param);
+    }
+}
+
+$Obj = new Product();
+$Obj->OverloadingMethod(4,7,8,);
+
+$Obj::OverloadingStaticMethod("A", "B", "C");
+
+?>
+
+
+<!--============================== 
+Polymorphism
+===============================-->
+
+//1. Method overloading (compile time polymorphism) 
+//2. Method overriding (run time polymorphism) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--============================== 
 
 ===============================-->
 
+
+
+
+
+
+
+<!--============================== 
+
+===============================-->
