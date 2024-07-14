@@ -1,16 +1,18 @@
 <?php
- 
-    $numbers = array(37, -5, 10, -7, -18);
 
-    if (!empty($numbers)) {
-        $absoluteValues = array_map('abs', $numbers);
+$n = 5;
 
-        $minAbsoluteValue = min($absoluteValues);
-        echo "The minimum absolute value is: " . $minAbsoluteValue;
-    } 
-    else {
-        echo "Please enter a valid list of numbers.";
-    }
+for($row=1; $row<=$n; $row++){
+    
+    for($col=1; $col<=$n-$row; $col++);
+    echo(" ");
+
+    for($col=1; $col<=(2*$row-1); $col++);
+    echo("*");
+
+    echo("\n");
+
+}
+
 
 ?>
-
