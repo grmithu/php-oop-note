@@ -37,7 +37,7 @@ echo $obj->brac(2024);  // arguments
 <!--============================== 
 Constructor
 --------------------------
-// Automatic
+// Automatic call hoy (magic method)
 ===============================-->
 
 <?php
@@ -100,11 +100,12 @@ Inheritance
 Object -> is a -> object
 ----------------------------------
 ===============================-->
+// Code re-use
+// Code duplication
 
 
 <?php
  
-
 class Father{
     function addTwo(){
         $num1=10;
@@ -162,6 +163,7 @@ $obj->addTwo();
 <!--============================== 
 Inheritance - Abstract class
 ===============================-->
+
 
 <?php
  
@@ -246,6 +248,47 @@ $Obj::OverloadingStaticMethod("A", "B", "C");
 ?>
 
 
+
+
+<!-- ========================
+Traits 
+==========================-->
+
+// Code re-use
+// Kono akti class er property/method onno akti class re-use trait dia karte parbo
+// 
+
+
+
+<?php
+
+
+class Post{
+    use shareable;
+}
+
+class Comment{
+    use shareable;
+}
+
+trait shareable{
+    public function share(){
+        printf(format: "Shared to social media");
+    }
+}
+
+$obj = new Post();
+echo $obj->share();
+
+
+?>
+
+
+
+
+
+
+
 <!--============================== 
 Polymorphism
 ===============================-->
@@ -257,30 +300,9 @@ Polymorphism
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--============================== 
-
+Encapsulation(Property/behavior)
+    ->Abstract
 ===============================-->
 
 
@@ -288,7 +310,31 @@ Polymorphism
 
 
 
-
 <!--============================== 
+To do:
+------
+Namespace
+Abstraction
+Composition vs inheritance
+Favor composition over inheritance
+Encapsulate
+
+// Solid OOP Principle:
+Dependency Invertion 
+Interface seggeration
+Open closed
+Single responsibility
+Liskov substitude
+
 
 ===============================-->
+
+
+
+
+
+<!-- ============================
+ 
+==============================-->
+
+Composition

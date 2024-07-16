@@ -1,18 +1,28 @@
+// Code re-use
+// Kono akti class er property/method onno akti class re-use trait dia karte parbo
+// 
+
+
+
 <?php
 
-$n = 5;
 
-for($row=1; $row<=$n; $row++){
-    
-    for($col=1; $col<=$n-$row; $col++);
-    echo(" ");
-
-    for($col=1; $col<=(2*$row-1); $col++);
-    echo("*");
-
-    echo("\n");
-
+class Post{
+    use shareable;
 }
+
+class Comment{
+    use shareable;
+}
+
+trait shareable{
+    public function share(){
+        printf(format: "Shared to social media");
+    }
+}
+
+$obj = new Post();
+echo $obj->share();
 
 
 ?>
