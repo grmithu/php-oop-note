@@ -285,6 +285,14 @@ echo $obj->share();
 
 
 
+<!--===================== 
+OOP Piller 
+======================-->
+|Encapsulation
+|Inheritance
+|Abstraction
+|Polymorphism
+<!-- ------------------ -->
 
 
 
@@ -295,7 +303,6 @@ Polymorphism
 
 //1. Method overloading (compile time polymorphism) 
 //2. Method overriding (run time polymorphism) 
-
 
 
 
@@ -337,4 +344,3 @@ Liskov substitude
  
 ==============================-->
 
-Composition
